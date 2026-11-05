@@ -2,37 +2,31 @@
 # CITATION.cff (How to cite this project)
 # ============================================================
 
-# REQ.UNIVERSAL: Professional open projects SHOULD include CITATION.cff.
-# WHY: Support correct citation and attribution.
-# ALT: Internal or private repositories may omit citation metadata.
-# CUSTOM: Update author, repository, license, and keyword fields as needed.
-# USAGE: See https://citation-file-format.github.io/ for details.
-
 cff-version: "1.2.0"
 message: "If using this project, please cite it as described in this file."
 type: software
 
-title: cintel-04-rolling-monitoring
-date-released: "2026-03-06"
+title: "cintel-04-rolling-monitoring-custom"
+date-released: "2026-11-05"
 
 authors:
-  - family-names: Case
-    given-names: Denise M.
-    orcid: "https://orcid.org/0000-0001-6165-7389"
-    affiliation: "Northwest Missouri State University, USA"
+  - family-names: Otubushin
+    given-names: Sandra
 
-repository-code: "https://github.com/denisecase/cintel-04-rolling-monitoring"
-url: "https://github.com/denisecase/cintel-04-rolling-monitoring"
+repository-code: "https://github.com/sandra8918/cintel-04-rolling-monitoring-custom"
+url: "https://sandra8918.github.io/cintel-04-rolling-monitoring-custom/"
 license: MIT
 
 abstract: |
-  Continuous Intelligence Example Project 4 - Rolling Monitoring.
-  Demonstrates professional Python project structure and workflows.
+  Custom Continuous Intelligence rolling-monitoring project by Sandra Otubushin.
+  Demonstrates professional Python project structure, time-series analysis,
+  rolling statistics, reproducible workflows, and software quality practices.
 
 keywords:
   - data analytics
   - continuous intelligence
   - rolling monitoring
+  - time series
   - professional workflows
   - reproducible workflows
   - software quality

@@ -23,7 +23,7 @@ Each observation includes:
 - Number of errors.
 - Total latency in milliseconds.
 
-[View Example Dataset](https://github.com/denisecase/cintel-04-rolling-monitoring/blob/main/data/system_metrics_timeseries.csv)
+[View Example Dataset](https://github.com/sandra8918/cintel-04-rolling-monitoring-custom/blob/main/data/system_metrics_timeseries.csv)
 
 ## Methods
 
@@ -54,7 +54,7 @@ The rolling metrics show several changes in activity.
 | 08:50 |           145.00 |           2.33 |
 | 09:10 |           198.33 |           7.67 |
 
-[View Rolling Monitoring Results](https://github.com/denisecase/cintel-04-rolling-monitoring/blob/main/artifacts/rolling_metrics.csv)
+[View Rolling Monitoring Results](https://github.com/sandra8918/cintel-04-rolling-monitoring-custom/blob/main/artifacts/rolling_metrics.csv)
 
 ## Interpretation
 
@@ -98,9 +98,9 @@ may be useful.
 
 ## Project Links
 
-- [GitHub Repository](https://github.com/denisecase/cintel-04-rolling-monitoring)
-- [Example Pipeline](https://github.com/denisecase/cintel-04-rolling-monitoring/blob/main/src/cintel/rolling_monitor.py)
-- [Results and Artifacts](https://github.com/denisecase/cintel-04-rolling-monitoring/tree/main/artifacts)
+- [GitHub Repository](https://github.com/sandra8918/cintel-04-rolling-monitoring-custom)
+- [Example Pipeline](https://github.com/sandra8918/cintel-04-rolling-monitoring-custom/blob/main/src/cintel/rolling_monitor.py)
+- [Results and Artifacts](https://github.com/sandra8918/cintel-04-rolling-monitoring-custom/tree/main/artifacts)
 
 ## Project Resources
 
