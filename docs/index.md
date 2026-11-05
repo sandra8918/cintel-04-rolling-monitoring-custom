@@ -122,3 +122,55 @@ After rerunning the project, the pipeline completed successfully and created
 the rolling metrics artifact. The larger window produces smoother averages.
 This experiment showed that window size affects the balance between
 responsiveness and stability.
+
+## D3 Custom Application: Reliability Monitoring
+
+### 1. New problem or question
+
+I wanted to determine when system reliability worsens by analyzing the
+rolling error rate instead of looking only at the total number of errors.
+
+### 2. Data used
+
+I used the time-series system metrics dataset in this project. Each record
+contains a timestamp, number of requests, number of errors, and total
+latency.
+
+[View the project dataset](https://github.com/sandra8918/cintel-04-rolling-monitoring-custom/blob/main/data/system_metrics_timeseries.csv)
+
+### 3. Techniques and tools
+
+I used Python, Polars, uv, and rolling-window calculations. I calculated
+error rate using:
+
+error rate = errors / requests
+
+I then calculated a rolling error-rate average using a five-observation
+window. I also used Git, pytest, and Zensical to test and document the work.
+
+### 4. Difference from the example
+
+The original example focused on rolling averages for requests, errors, and
+latency. My custom analysis focuses on system reliability by calculating the
+percentage of requests that resulted in errors and then smoothing that
+percentage over time.
+
+### 5. Finding or insight
+
+The rolling error rate makes reliability patterns easier to see because it
+reduces the effect of one unusual observation. The five-observation window
+produces a smoother signal, but it responds more slowly to sudden changes.
+
+### 6. Limitation
+
+The dataset is small and represents only a limited period of time. The
+analysis also does not include a production alert threshold or information
+about the cause of each error. A larger dataset and a defined service-level
+threshold would improve the analysis.
+
+## Visual Evidence
+
+The artifact below shows the calculated error rate and rolling error-rate
+columns produced by the customized monitoring pipeline.
+
+![Rolling error-rate artifact](images/rolling-error-rate-artifact.png)

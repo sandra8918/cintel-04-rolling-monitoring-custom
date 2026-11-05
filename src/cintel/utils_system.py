@@ -72,22 +72,29 @@ def design_signals(df: pl.DataFrame) -> pl.DataFrame:
 
 
 def compute_rolling_metrics(df: pl.DataFrame, window_size: int) -> pl.DataFrame:
-    """Add rolling-mean columns for requests, errors, and total_latency_ms.
+    """Add rolling means for requests, errors, latency, and error rate.
 
-    Assumes df is already sorted by timestamp (see load_timeseries_metrics).
+    Assumes df is already sorted by timestamp.
     """
+    is_requests_positive = pl.col("requests") > 0
+
     return df.with_columns(
+        pl.when(is_requests_positive)
+        .then(pl.col("errors") / pl.col("requests"))
+        .otherwise(0.0)
+        .alias("error_rate")
+    ).with_columns(
         [
             pl.col("requests").rolling_mean(window_size).alias("requests_rolling_mean"),
             pl.col("errors").rolling_mean(window_size).alias("errors_rolling_mean"),
             pl.col("total_latency_ms")
             .rolling_mean(window_size)
             .alias("latency_rolling_mean"),
+            pl.col("error_rate")
+            .rolling_mean(window_size)
+            .alias("error_rate_rolling_mean"),
         ]
     )
-
-
-# === cintel-05: DRIFT DETECTION ===
 
 
 def compute_drift_summary(
