@@ -108,3 +108,17 @@ may be useful.
 - [Professional Python Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Professional Python Project Explainer](https://pup-pack.github.io/professional-python-project-explainer/).
 - [Suggested Datasets](https://denisecase.github.io/pro-analytics-02/reference/datasets/cintel/)
+
+## D2 Technical Experiment
+
+The original project used a rolling window of 3 observations. I changed the
+window size to 5 observations to test whether a larger window would produce
+smoother results.
+
+I predicted that the five-observation window would reduce short-term
+fluctuations but respond more slowly to sudden changes.
+
+After rerunning the project, the pipeline completed successfully and created
+the rolling metrics artifact. The larger window produces smoother averages.
+This experiment showed that window size affects the balance between
+responsiveness and stability.
